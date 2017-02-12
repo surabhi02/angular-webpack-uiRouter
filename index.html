@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Dashboard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/app.css">
+
+        <!--<script src="js/vendor.bundle.js"></script>
+        <script src="js/app.bundle.js"></script>-->
+
+        <script src="app/app.js"></script>
+        
+    </head>
+    <body ng-app="dashboard">
+        <!--TOP NAVIGATION -->
+        <nav class="navbar navbar-inverse" role="navigation">
+            <div class="navbar-header">
+                <a class="navbar-brand" ui-sref="#">AngularUI Router</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a ui-sref="home" ui-sref-active="active">Home</a></li>
+                <li> <a ui-sref="about" ui-sref-active="active">About</a></li>
+                <li> <a ui-sref="gallery" ui-sref-active="active">Gallery</a></li>
+            </ul>
+        </nav>
+
+ 
+        <!-- MAIN CONTENT -->
+        <div class="container">
+
+            <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
+            <ui-view></ui-view> 
+
+        </div>
+
+    </body>
+</html>
