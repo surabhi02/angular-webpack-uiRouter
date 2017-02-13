@@ -1,6 +1,8 @@
 var router = require('angular-ui-router');
-var dashboard = angular.module('dashboard', ['ui.router']);
 
+var dashboard = angular.module('dashboard', ['ui.router']);
+// require('jquery');
+require('bootstrap');
 require('./directives');
 require('./services');
 require('./controllers');
@@ -31,4 +33,3 @@ dashboard.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider.state(aboutState);
     $stateProvider.state(galleryState);
 });
-

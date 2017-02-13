@@ -5,13 +5,17 @@ module.exports = {
     watch: true,
     entry: {
         app: './app/app.js',
-        // vendor: ['angular']  
+        vendor: ['angular']
     },
     output: {
         path: __dirname + '/js',
         filename: 'app.bundle.js'
     },
-    // plugins: [
-    //     new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"vendor.bundle.js")
-    // ]
+    plugins: [
+        new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"vendor.bundle.js"),
+        new webpack.ProvidePlugin({
+           $: "jquery",
+           jQuery: "jquery"
+       })
+    ]
 };
